@@ -11,136 +11,71 @@
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background: #111;
-      color: #fff;
+      background: #f4f4f4;
       margin: 0;
       padding: 0;
-      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(45deg, #ff00b0, #00b0ff);
+      height: 100vh;
     }
 
     .container {
-      background: rgba(0, 0, 0, 0.7);
-      border-radius: 20px;
-      padding: 30px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
       width: 100%;
       max-width: 600px;
       text-align: center;
-      animation: fadeIn 1s ease-in-out;
+      box-sizing: border-box; /* Ensures padding and borders are included in width */
     }
 
     h1 {
-      font-size: 2.5rem;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+      font-size: 1.8rem;
+      color: #333;
     }
 
     label {
-      font-size: 1.2rem;
-      color: #fff;
+      font-size: 1rem;
+      color: #333;
       margin-bottom: 10px;
       display: block;
-      text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
     }
 
     textarea {
       width: 100%;
-      padding: 20px;
+      padding: 15px;
       font-size: 1rem;
-      border-radius: 10px;
-      border: 2px solid #fff;
-      background: #333;
-      color: #fff;
-      box-sizing: border-box;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      background: #f9f9f9;
+      color: #333;
       resize: none;
       margin-bottom: 20px;
       outline: none;
-      transition: all 0.3s ease;
-      height: 600px; /* Increased height (4 times larger) */
-    }
-
-    textarea:focus {
-      border-color: #ff00b0;
-      box-shadow: 0 0 10px rgba(255, 0, 176, 0.6);
+      box-sizing: border-box; /* Ensures padding and borders are included in width */
     }
 
     .result {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-weight: bold;
-      margin-top: 20px;
-      padding: 15px;
-      background-color: #fff;
+      padding: 10px;
+      background-color: #e0e0e0;
       color: #333;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      display: inline-block;
-      animation: slideIn 0.5s ease-out;
+      border-radius: 5px;
+      margin-top: 20px;
     }
 
     .ads {
       margin-top: 30px;
       text-align: center;
-      padding: 20px;
-      background-color: #222;
-      border-radius: 10px;
-      width: 100%;
-      box-sizing: border-box;
-      display: flex;
-      justify-content: center; /* Horizontally center the ad */
-      align-items: center; /* Vertically center the ad */
-      overflow: hidden; /* Prevents the ad from spilling outside */
     }
 
     .ads ins {
-      display: block; /* Ensures that the ad takes up full width */
-      max-width: 100%;
-      margin: 0 auto; /* Center-align the ad */
-      width: 100%; /* Ensures the ad spans the full width of the container */
+      display: block;
+      margin: 0 auto;
       text-align: center;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: scale(0.9);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    @keyframes slideIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-
-      textarea {
-        font-size: 1rem;
-        padding: 15px;
-        height: 400px; /* Adjusted height for smaller screens */
-      }
-
-      .result {
-        font-size: 1.2rem;
-      }
     }
   </style>
 </head>
@@ -155,20 +90,20 @@
     <div class="result" id="result">Byte Size: 0 B</div>
 
     <div class="ads">
-      <!-- Google Adsense Ad -->
-      <ins class="adsbygoogle"
-          style="display:block"
-          data-ad-client="ca-pub-9288770962100185"
-          data-ad-slot="6399153707"
-          data-ad-format="auto"
-          data-full-width-responsive="true"></ins>
-      <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9288770962100185"
+            crossorigin="anonymous"></script>
+        <!-- notepad -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-9288770962100185"
+            data-ad-slot="6399153707"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </div>
   </div>
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
   <script>
     function calculateByteSize() {
