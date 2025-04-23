@@ -92,7 +92,10 @@
     }
 
     .ads ins {
-      display: block;
+      display: inline-block;
+      width: 100%; /* Make the ad container fill the width */
+      max-width: 100%; /* Prevent the ad from exceeding container's width */
+      text-align: center;
     }
 
     @keyframes fadeIn {
@@ -145,8 +148,9 @@
     <div class="result" id="result">Byte Size: 0 B</div>
 
     <div class="ads">
+      <!-- Google Adsense Ad -->
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9288770962100185"
-          crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
       <ins class="adsbygoogle"
           style="display:block"
           data-ad-client="ca-pub-9288770962100185"
