@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /private/
 Allow: /
 
-Sitemap: https://dragonchan85.github.io/bytesize/sitemap.xml
+Sitemap: https://bytesize.yesnomark.com/sitemap.xml
